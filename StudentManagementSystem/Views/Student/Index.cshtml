@@ -4,30 +4,31 @@
     ViewData["Title"] = "Students";
 }
 
-<h2>Students</h2>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-primary">Student List</h2>
+        <a asp-action="Create" class="btn btn-success">+ Add Student</a>
+    </div>
 
-<p>
-    <a asp-action="Create">Add New Student</a>
-</p>
-
-<table border="1" cellpadding="5">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Age</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var student in Model)
-        {
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
             <tr>
-                <td>@student.StudentId</td>
-                <td>@student.Name</td>
-                <td>@student.Email</td>
-                <td>@student.Age</td>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.StudentId</td>
+                    <td>@student.Name</td>
+                    <td>@student.Email</td>
+                    <td>@student.Age</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
