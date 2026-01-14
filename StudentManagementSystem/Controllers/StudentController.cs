@@ -9,7 +9,7 @@ namespace StudentManagementSystem.Controllers
         private readonly IStudentService _studentService;
 
         public StudentController(IStudentService studentService)
-        {
+        { 
             _studentService = studentService;
         }
 
